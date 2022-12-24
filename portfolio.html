@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+	<title>-aarav's portfolio-</title>
+</head>
+<body>
+	<style>
+		* {
+			font-family: 'Unbounded', cursive;
+			background-color: #1F1F26;
+			color: #8C9196;
+
+		}
+		h1 {
+			
+			font-size: 10ex;
+			
+			  animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+   position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 100%;
+
+		}
+		h1:hover, h2:hover {
+			margin-bottom: 7%;
+			color: #DBE5F0;
+   }	 
+		h2 {
+			font-size: 250%;
+			 position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 100%;
+  animation: lightSpeedInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+   }
+   ul {
+   	position: absolute;
+  top: 100%;
+  left: 3%;
+  width: 100%;
+  	font-size: 275%;
+		text-align: center; 	 
+
+  }
+		li {
+			margin-bottom: 7%;
+			transition: all 5s ease;
+			transition-duration: 5s;
+}
+
+		li:hover {
+			margin-bottom: 7%;
+			color: #DBE5F0;
+   }	 
+
+	</style>
+  <a href="https://www.instagram.com/treefingereater/" target="_blank"><h1>-aarav's portfolio-</h1></a>
+  <a href="https://github.com/aaravzer" target="_blank"><h2 >-my projects (scroll down)-</h2> </a>
+  <ul>
+  	<a href="https://github.com/aaravzer/voidput" target="_blank"><li  data-aos="zoom-in-down" id="one" >voidput</li> </a>
+  	<a href="https://github.com/aaravzer/PredictStockPriceBotWIP" target="_blank"><li data-aos="zoom-in-left" id="two" >predict stock price bot (wip)</li></a>
+  	<a href="https://github.com/aaravzer/DiscordChatWithGPT/tree/main" target="_blank"><li data-aos="zoom-in-right" id="three" > chat with gpt-three on discord (wip)</li></a>
+  	<a href="https://github.com/aaravzer/LargeLangaugeModel" target="_blank"><li data-aos="zoom-in-up" id="four" >keras large langauge model</li></a>
+  	<a href="https://github.com/aaravzer/SimpleFaceDetection" target="_blank"><li  data-aos="zoom-in-down" id="five" >cv-two face detection</li></a>
+
+  </ul>
+
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
