@@ -28,19 +28,26 @@
         select {
           position: justify;
           padding: 3px;
-          text-indent: 23px; 
+          text-indent: 10px; 
           font-size: 150%;
           border: 5px solid #F6EBC8;
           margin: 10px;
           -webkit-appearance: none;
            -webkit-appearance: none;
+             border-radius: 5px;
+
 
         }
-        option, input {
+        option, input, optgroup {
           font-size: 150%;
            border: 5px solid #F6EBC8;
+             border-radius: 5px;
+             position: relative;
+
         }
         ::placeholder {
+          text-align: center;
+
           color: #F6EBC8;
         }
       </style>
@@ -75,14 +82,18 @@
     <h2>Number Conversion App</h2>
     <input type="text" id="number" placeholder="Enter the number"/>
     <select id="from">
+      <optgroup>
       <option value="binary">Binary</option>
       <option value="decimal">Decimal</option>
       <option value="hexadecimal">Hexadecimal</option>
+      <optgroup>
     </select>
     <select id="to">
+      <optgroup>
       <option value="binary">Binary</option>
       <option value="decimal">Decimal</option>
       <option value="hexadecimal">Hexadecimal</option>
+      <optgroup>
     </select>
     <input type="button" value="Convert" onclick="convertNumber()"/>
     <p>Result: <span id="result"></span></p>
