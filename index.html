@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
       <style type="text/css">
         * {
-          font-family: 'Seymour One', sans-serif;
+          font-family: 'Bebas Neue', cursive;
+          background-color: #8DC1A7;
+        color: #F6EBC8;
+        }
+        h2 {
+          font-size: 500%;
+          width: 1000%;
+
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        select {
+          width: 150px;
+          font-size: 75%;
+        }
+        option {
+          font-size: 150%;
         }
       </style>
     <title>Number Conversion App</title>
@@ -34,6 +54,7 @@
     </script>
   </head>
   <body>
+    <div>
     <h2>Number Conversion App</h2>
     <input type="text" id="number" placeholder="Enter the number"/>
     <select id="from">
@@ -48,5 +69,6 @@
     </select>
     <input type="button" value="Convert" onclick="convertNumber()"/>
     <p>Result: <span id="result"></span></p>
+    </div>
   </body>
 </html>
