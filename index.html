@@ -1,77 +1,164 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-      <style type="text/css">
-        * {
-          font-family: 'Bebas Neue', cursive;
-          background-color: #8DC1A7;
-        color: #F6EBC8;
-        }
-        h2 {
-          font-size: 500%;
-          width: 1000%;
+    <!-- Include the animate.css library for CSS animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Preconnect to the Google Fonts server to improve page load performance -->
+    <!-- Include the Unbounded font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap" rel="stylesheet">
+    <style type="text/css">
+      * {
+        /* Set the default font for the page to Unbounded */
+        font-family: 'Unbounded', cursive;
+        /* Set the default background color to yellow */
+        background-color: #2E282A;
+        /* Set the default text color to dark grey */
+        color: #E4572E;
+      }
 
-        }
-        p {
-          font-size: 350%;
-          margin-left: 30%;
-           padding: 10px;
-        }
-        div {
+      body {
+        /* Reset the default margin for the body element */
+        margin: 0;
+      }
 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        select {
-          position: justify;
-          padding: 3px;
-          text-indent: 10px; 
-          font-size: 150%;
-          border: 5px solid #F6EBC8;
-          margin: 10px;
-          -webkit-appearance: none;
-           -webkit-appearance: none;
-             border-radius: 5px;
+      html {
+        /* Set the width of the html element to 100% */
+        width: 100%;
+        /* Reset the default margin for the html element */
+        margin: 0;
+      }
 
+      h2 {
+        /* Set the font size for h2 elements to 350% */
+        font-size: 350%;
+        /* Set the width of the h2 element to 100% */
+        width: 100%;
+        /* Set the margin of the h2 element to 5% */
+        margin-left: 5%;
+        animation: slideInDown;
+        /* Animate the h2 element with the "slideInDown" animation from animate.css */
+        animation-duration: 2s;
+        /* Set the duration of the animation to 2 seconds */
+      }
 
-        }
-        option, input, optgroup {
-          font-size: 150%;
-           border: 5px solid #F6EBC8;
-             border-radius: 5px;
-             position: relative;
+      p {
+        /* Set the font size for p elements to 350% */
+        font-size: 350%;
+        /* Set the margin of the p element to 25% */
+        margin-left: 25%;
+        /* Set the padding for the p element to 10px */
+        padding: 10px;
+        animation: slideInUp;
+        /* Animate the p element with the "slideInUp" animation from animate.css */
+        animation-duration: 2s;
+        /* Set the duration of the animation to 2 seconds */
+      }
 
-        }
-        ::placeholder {
-          text-align: center;
+      div {
+        /* Set the margin of the div element to 10% */
+        margin-left: 10%;
+        /* Set the width of the div element to 100% */
+        width: 100%;
+        /* Set the position of the div element to absolute */
+        position: absolute;
+        /* Set the top position of the div element to 50% */
+        top: 50%;
+        /* Set the left position of the div element to 50% */
+        left: 50%;
+        /* Translate the div element by -50% horizontally and -50% vertically */
+        transform: translate(-50%, -50%);
+      }
 
-          color: #F6EBC8;
-        }
-      </style>
+      select {
+        /* Set the position of the select element to justify */
+        position: justify;
+        /* Animate the select element with the "slideInLeft" animation from animate.css */
+        animation: slideInLeft;
+        animation-duration: 2s;
+        /* Set the duration of the animation to 2 seconds */
+        /* Set the padding for the select element to 3px */
+        padding: 3px;
+        /* Set the text indent for the select element to 10px */
+        text-indent: 10px;
+        /* Set the font size for the select element to 150% */
+        font-size: 150%;
+        /* Set the border for the select element to 5px solid dark grey */
+        border: 5px solid  #E4572E;
+        /* Reset the default margin for the select element */
+        margin: 0;
+        /* Hide the default appearance of the select element in Webkit-based browsers */
+        -webkit-appearance: none;
+        /* Set the border radius for the select element to 5px */
+        border-radius: 5px;
+      }
+
+      option,
+      input,
+      optgroup {
+        /* Set the font size for option, input, and optgroup elements to 150% */
+        font-size: 150%;
+        /* Set the border for option, input, and optgroup elements to 5px solid dark grey */
+        border: 5px solid  #E4572E;
+        /* Set the border radius for option, input, and optgroup elements to 5px */
+        border-radius: 5px;
+        /* Set the position of option, input, and optgroup elements to relative */
+        position: relative;
+        /* Animate option, input, and optgroup elements with the "slideInLeft" animation from animate.css */
+        animation: slideInLeft;
+        /* Set the duration of the animation to 2 seconds */
+        animation-duration: 2s;
+      }
+
+      ::placeholder {
+        /* Set the text alignment for placeholder text to center */
+        text-align: center;
+        /* Set the color of placeholder text to dark grey */
+        color:  #E4572E;
+      }
+    </style>
     <title>Number Conversion App</title>
-    <script type="text/JavaScript">
+    <script type="text/JavaScript"> /* Define the convertNumber function */
       function convertNumber() {
+          /* Get the value of the "number" input field */
         var number = document.getElementById("number").value;
-        var from = document.getElementById("from").value;
-        var to = document.getElementById("to").value;
-        var result;
+                /* Get the value of the "from" select field */
 
-        if (from == 'binary' && to == 'decimal') {
-          result = parseInt(number, 2).toString(10);
-        } else if (from == 'decimal' && to == 'binary') {
-          result = parseInt(number, 10).toString(2);
-        } else if (from == 'binary' && to == 'hexadecimal') {
-          result = parseInt(number, 2).toString(16);
-        } else if (from == 'hexadecimal' && to == 'binary') {
-          result = parseInt(number, 16).toString(2);
-        } else if (from == 'decimal' && to == 'hexadecimal') {
-          result = parseInt(number, 10).toString(16);
-        } else if (from == 'hexadecimal' && to == 'decimal') {
-          result = parseInt(number, 16).toString(10);
-        }
+        var from = document.getElementById("from").value;
+                /* Get the value of the "to" select field */
+
+        var to = document.getElementById("to").value;
+                /* Declare the result variable */
+        var result;
+          /* If the "from" and "to" values are the same, set the result to the number */
+          if (from == to) {
+    result = number;
+    /* If the "from" value is "binary" and the "to" value is "decimal", convert the number from binary to decimal and set the result */
+  } else if (from == 'binary' && to == 'decimal') {
+    result = parseInt(number, 2).toString(10);
+  }  /* If the "from" value is "decimal" and the "to" value is "binary", convert the number from decimal to binary and set the result */
+    else if (from == 'decimal' && to == 'binary') {
+    result = parseInt(number, 10).toString(2);
+  } 
+  /* If the "from" value is "binary" and the "to" value is "hexadecimal", convert the number from binary to hexadecimal and set the result */
+  else if (from == 'binary' && to == 'hexadecimal') {
+    result = parseInt(number, 2).toString(16);
+  } 
+ /* If the "from" value is "hexadecimal" and the "to" value is "binary", convert the number from hexadecimal to binary and set the result */
+  else if (from == 'hexadecimal' && to == 'binary') {
+    result = parseInt(number, 16).toString(2);
+  } 
+   /* If the "from" value is "decimal" and the "to" value is "hexadecimal", convert the number from decimal to hexadecimal and set the result */
+  else if (from == 'decimal' && to == 'hexadecimal') {
+    result = parseInt(number, 10).toString(16);
+  } 
+ /* If the "from" value is "hexadecimal" and the "to" value is "decimal", convert the number from hexadecimal to decimal and set the result */
+  else if (from == 'hexadecimal' && to == 'decimal') {
+    result = parseInt(number, 16).toString(10);
+  }
+
+                /* Display the result in the "result" element */
 
         document.getElementById("result").innerHTML = result;
       }
@@ -79,24 +166,28 @@
   </head>
   <body>
     <div>
-    <h2>Number Conversion App</h2>
-    <input type="text" id="number" placeholder="Enter the number"/>
-    <select id="from">
-      <optgroup>
-      <option value="binary">Binary</option>
-      <option value="decimal">Decimal</option>
-      <option value="hexadecimal">Hexadecimal</option>
-      <optgroup>
-    </select>
-    <select id="to">
-      <optgroup>
-      <option value="binary">Binary</option>
-      <option value="decimal">Decimal</option>
-      <option value="hexadecimal">Hexadecimal</option>
-      <optgroup>
-    </select>
-    <input type="button" value="Convert" onclick="convertNumber()"/>
-    <p>Result: <span id="result"></span></p>
+      <h2>Number Conversion App</h2>
+      <!-- Create an input field for the number to be converted -->
+      <input type="text" id="number" placeholder="Enter the number" />
+      <!-- Create a select field for the number's base -->
+      <select id="from">
+        <!-- Create options for the select field for each base -->
+        <optgroup>
+          <option value="binary">Binary</option>
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+        <optgroup>
+      </select>
+      <select id="to">
+        <optgroup>
+          <option value="binary">Binary</option>
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+        <optgroup>
+      </select>
+      <input type="button" value="Convert" onclick="convertNumber()" />
+      <p>Result: <span id="result"></span>
+      </p>
     </div>
   </body>
 </html>
