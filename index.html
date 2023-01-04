@@ -13,28 +13,27 @@
         /* Set the default font for the page to Unbounded */
         font-family: 'Unbounded', cursive;
         /* Set the default background color to yellow */
-        background-color: #21295C;
+        background-color: #76082C;
         /* Set the default text color to dark grey */
-        color: #449DD1;
+        color: #DAC292;
       }
 
-      body {
-        /* Reset the default margin for the body element */
-        margin: 0;
-      }
+      
+
+body {
+  position: flex;
+}
 
       html {
         /* Set the width of the html element to 100% */
-        width: 100%;
         /* Reset the default margin for the html element */
         margin: 0;
       }
 
       h2 {
         /* Set the font size for h2 elements to 350% */
-        font-size: 350%;
+        font-size: 6ex;
         /* Set the width of the h2 element to 100% */
-        width: 100%;
         /* Set the margin of the h2 element to 5% */
         margin-left: 5%;
         animation: slideInDown;
@@ -45,11 +44,10 @@
 
       p {
         /* Set the font size for p elements to 350% */
-        font-size: 350%;
+        font-size: 4.5ex;
         /* Set the margin of the p element to 25% */
         margin-left: 25%;
         /* Set the padding for the p element to 10px */
-        padding: 10px;
         animation: slideInUp;
         /* Animate the p element with the "slideInUp" animation from animate.css */
         animation-duration: 2s;
@@ -73,7 +71,7 @@
 
       select {
         /* Set the position of the select element to justify */
-        position: justify;
+        position: flex;
         /* Animate the select element with the "slideInLeft" animation from animate.css */
         animation: slideInLeft;
         animation-duration: 2s;
@@ -85,22 +83,27 @@
         /* Set the font size for the select element to 150% */
         font-size: 150%;
         /* Set the border for the select element to 5px solid dark grey */
-        border: 5px solid  #E4572E;
+        border: 5px solid  #DAC292;
         /* Reset the default margin for the select element */
         margin: 0;
         /* Hide the default appearance of the select element in Webkit-based browsers */
         -webkit-appearance: none;
         /* Set the border radius for the select element to 5px */
         border-radius: 5px;
+        background-color: #DAC292;
+        color: #76082C;
       }
 
       option,
       input,
       optgroup {
+        transition-duration: 0.7s;
+        background-color: #DAC292;
+        color: #76082C;
         /* Set the font size for option, input, and optgroup elements to 150% */
         font-size: 150%;
         /* Set the border for option, input, and optgroup elements to 5px solid dark grey */
-        border: 5px solid  #E4572E;
+        border: 5px solid  #DAC292;
         /* Set the border radius for option, input, and optgroup elements to 5px */
         border-radius: 5px;
         /* Set the position of option, input, and optgroup elements to relative */
@@ -115,7 +118,11 @@
         /* Set the text alignment for placeholder text to center */
         text-align: center;
         /* Set the color of placeholder text to dark grey */
-        color:  #E4572E;
+        color: #76082C;
+      }
+      input:hover {
+          color: #DAC292;
+       background-color: #76082C;
       }
     </style>
     <title>Number Conversion App</title>
